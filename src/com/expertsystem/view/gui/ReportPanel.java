@@ -73,8 +73,9 @@ public class ReportPanel extends JPanel {
         details.setBackground(Color.WHITE);
         details.setBorder(new EmptyBorder(30, 0, 10, 0));
 
-        JLabel confLbl = new JLabel("Tingkat Keyakinan: " + result.getFormattedConfidence());
+        JLabel confLbl = new JLabel("<html>Tingkat Keyakinan: " + result.getFormattedConfidence() + "</html>");
         confLbl.setFont(new Font("SansSerif", Font.BOLD, 18));
+        confLbl.setBorder(new EmptyBorder(0, 0, 0, 0));
         confLbl.setAlignmentX(Component.LEFT_ALIGNMENT);
         
         JProgressBar bar = new JProgressBar(0, 100);
@@ -153,6 +154,7 @@ public class ReportPanel extends JPanel {
         scrollPane.getVerticalScrollBar().setUnitIncrement(16);
         scrollPane.setBackground(Color.WHITE);
         scrollPane.getViewport().setBackground(Color.WHITE);
+        scrollPane.setAlignmentX(Component.LEFT_ALIGNMENT);
 
         details.add(scrollPane);
 
